@@ -12,7 +12,7 @@
 - Перейти в папку, в которую планируется скачать репозиторий
 - Выполнить команду GIT 
 ```sh
-git clone https://github.com/kozlovsv/yandex_lms_evaluator.git
+git clone https://github.com/iiiuba/lms.git
 ```
 - Перейти в папку с проектом и запустить bat файл `start.bat`
 - Или в консоли в папке проекта выполнить команду 
