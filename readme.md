@@ -21,15 +21,23 @@ docker-compose up -d --build
 docker-compose down
 ```
 Откройте веб-интерфейс: http://127.0.0.1/
-** API:**
 
+*** API:***
+```
 GET /api/expressions - список выражений.
+
 GET /api/expressions/2 - конкретное выражение.
+
 POST /api/expressions - добавить выражение.
+
 GET /api/get-new-task - получить новое выражение.
+
 GET /api/settings - список настроек.
+
 POST /api/settings - сохранить настройки.
+
 GET /api/workers - список агентов.
+```
 ** Дополнительно:**
 
 Подключение к базе данных:
