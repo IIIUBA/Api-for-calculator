@@ -47,17 +47,27 @@ GET /api/workers - список агентов.
 ** Дополнительно:**
 
 Подключение к базе данных:
+
 ```
+
 Хост: 127.0.0.1
+
 Порт: 3306
+
 ```
 ```
 Пользователь: root
 Пароль: testerum
 ```
-** Ссылки:**
+*** Ссылки: ***
+```
 Яндекс Лицей: https://yandexlyceum.ru/
+
 Docker: https://www.docker.com/
+
 Docker Compose: https://docs.docker.com/compose/
+
 Vue.js: https://vuejs.org/
+
 MySQL: https://www.mysql.com/
+```
