@@ -1,4 +1,4 @@
-module github.com/iiiuba/lms/server_for_match_for_match
+module github.com/IIIUBA/lms/tree/main/server_for_match_for_match
 
 go 1.21.5
 

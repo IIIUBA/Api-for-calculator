@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/iiiuba/lms/server_for_match/pkg/models"
+	"github.com/IIIUBA/lms/tree/main/server_for_match/pkg/models"
 )
 
 type Checker struct {

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/iiiuba/lms/worker/pkg/models"
+	"github.com/IIIUBA/lms/tree/main/worker/pkg/models"
 )
 
 var priorities = map[string]uint8{

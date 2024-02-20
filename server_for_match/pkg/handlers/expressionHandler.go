@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/iiiuba/lms/server_for_match/pkg/models"
+	"github.com/IIIUBA/lms/tree/main/server_for_match/pkg/models"
 )
 
 var (

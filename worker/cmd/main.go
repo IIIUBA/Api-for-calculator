@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/iiiuba/lms/worker/pkg/models"
-	"github.com/iiiuba/lms/worker/pkg/pool"
-	"github.com/iiiuba/lms/worker/pkg/rpn"
+	"github.com/IIIUBA/lms/tree/main/worker/pkg/models"
+	"github.com/IIIUBA/lms/tree/main/worker/pkg/pool"
+	"github.com/IIIUBA/lms/tree/main/worker/pkg/rpn"
 )
 
 const SERVER_URL = "http://server_for_match:8001/"

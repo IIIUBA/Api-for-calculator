@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/iiiuba/lms/server_for_match/pkg/handlers"
-	"github.com/iiiuba/lms/server_for_match/pkg/checker"
-	"github.com/iiiuba/lms/server_for_match/pkg/models"
+	"github.com/IIIUBA/lms/tree/main/server_for_match/pkg/checker"
+	"github.com/IIIUBA/lms/tree/main/server_for_match/pkg/handlers"
+	"github.com/IIIUBA/lms/tree/main/server_for_match/pkg/models"
 )
 
 func main() {
