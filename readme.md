@@ -2,7 +2,7 @@
 
 ** Особенности:**
 
-Веб-интерфейс: HTML + Vue.js
+Веб-интерфейс: +
 API: RESTful API
 База данных: MySQL
 Масштабируемость: Возможность распределения вычислений по агентам
@@ -50,7 +50,6 @@ GET /api/workers - список агентов.
 Пароль: testerum
 ```
 ** Ссылки:**
-
 Яндекс Лицей: https://yandexlyceum.ru/
 Docker: https://www.docker.com/
 Docker Compose: https://docs.docker.com/compose/
