@@ -5,14 +5,14 @@ WORKDIR /user/local/src
 RUN apk --no-cache add gcc musl-dev bash mariadb-client
 
 # dependencies
-COPY ["server/go.mod", "server/go.sum", "./"]
+COPY ["server_for_match/go.mod", "server_for_match/go.sum", "./"]
 RUN go mod download
 
 ## Add the wait script to the image
 COPY --from=ghcr.io/ufoscout/docker-compose-wait:latest /wait /wait
 
 # build
-COPY server ./
+COPY server_for_match ./
 RUN go build -o ./bin/app cmd/main.go
 
 # Runner

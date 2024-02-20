@@ -14,7 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Дамп структуры для таблица evaluator.agent
+-- Дамп структуры для таблица lms.agent
 CREATE TABLE IF NOT EXISTS `agent` (
   `name` varchar(255) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0 - доступен, 1 - недоступен',
@@ -24,13 +24,13 @@ CREATE TABLE IF NOT EXISTS `agent` (
   KEY `last_ping` (`last_ping`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Дамп данных таблицы evaluator.agent: ~2 rows (приблизительно)
+-- Дамп данных таблицы lms.agent: ~2 rows (приблизительно)
 DELETE FROM `agent`;
 INSERT INTO `agent` (`name`, `status`, `last_ping`, `current_op`) VALUES
 	('Agent1', 0, '2024-02-15 12:43:12', ''),
 	('Agent2', 0, '2024-02-15 12:43:12', '');
 
--- Дамп структуры для таблица evaluator.expression
+-- Дамп структуры для таблица lms.expression
 CREATE TABLE IF NOT EXISTS `expression` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `value` varchar(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `expression` (
   UNIQUE KEY `idempotency_key` (`idempotency_key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Дамп данных таблицы evaluator.expression: ~16 rows (приблизительно)
+-- Дамп данных таблицы lms.expression: ~16 rows (приблизительно)
 DELETE FROM `expression`;
 INSERT INTO `expression` (`id`, `value`, `status`, `result`, `idempotency_key`, `updated_at`, `created_at`, `result_text`) VALUES
 	(1, '((23+587)*(4+5)*(6+7))/(5-3+4)+45+78', 0, '0', '786706b8-ed80-443a-80f6-ea1fa8cc1b57', '2024-02-15 14:36:25', '2024-02-14 16:33:00', ''),
@@ -67,14 +67,14 @@ INSERT INTO `expression` (`id`, `value`, `status`, `result`, `idempotency_key`, 
 	(26, '5*5', 0, '0', '4134db9c-42a3-491f-9a57-675e492f9c3a', '2024-02-15 14:36:25', '2024-02-14 16:34:21', ''),
 	(27, '5*5*5*5', 0, '0', '8c52abae-6bc3-4a6b-ba0a-25056ef4cb93', '2024-02-15 14:36:25', '2024-02-14 16:34:28', '');
 
--- Дамп структуры для таблица evaluator.settings
+-- Дамп структуры для таблица lms.settings
 CREATE TABLE IF NOT EXISTS `settings` (
   `type` enum('Плюс','Минус','Умножение','Деление','Таймаут проверки агента','Таймаут удаления агента') NOT NULL,
   `value` int(11) NOT NULL,
   PRIMARY KEY (`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Таблица настроек';
 
--- Дамп данных таблицы evaluator.settings: ~6 rows (приблизительно)
+-- Дамп данных таблицы lms.settings: ~6 rows (приблизительно)
 DELETE FROM `settings`;
 INSERT INTO `settings` (`type`, `value`) VALUES
 	('Плюс', 1000),
