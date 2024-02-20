@@ -8,10 +8,10 @@ API: RESTful API
 Масштабируемость: Возможность распределения вычислений по агентам
 Тестирование: Тестовые выражения в базе данных
 ** Запуск:**
-
 Установите Docker и Docker Compose.
+```
 git clone https://github.com/iiiuba/lms.git
-
+```
 ***Start***
 ```
 docker-compose up -d --build
