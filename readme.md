@@ -3,71 +3,55 @@
 
 ## Особенности:
 
-Веб-интерфейс: +
+- Метод: POST
+- Веб-интерфейс: -
+- Масштабируемость: Возможность распределения вычислений по агента
 
-API: RESTful API
-
-База данных: MySQL
-
-Масштабируемость: Возможность распределения вычислений по агента
-
-
-## Запуск:
-
-Установите Docker и Docker Compose.
+## Установка
+1.
 ```
 git clone https://github.com/IIIUBA/lms.git
 ```
-***Start***
 ```
-docker-compose up -d --build
+Run Code ( Cltr + Alt + N ) или go run main.go
 ```
-***Stop***
-```
-docker-compose down
-```
-Откройте веб-интерфейс: http://127.0.0.1/
 
 ## API:
-```
-GET /api/expressions - список выражений.
-
-GET /api/expressions/2 - конкретное выражение.
-
-POST /api/expressions - добавить выражение.
-
-GET /api/get-new-task - получить новое выражение.
-
-GET /api/settings - список настроек.
-
-POST /api/settings - сохранить настройки.
-
-GET /api/workers - список агентов.
-```
-## Дополнительно:
-
-Подключение к базе данных:
 
 ```
-
-Хост: 127.0.0.1
-
-Порт: 3306
+curl -X POST -d "expression=2p3*4" http://localhost:8080/expression
+```
+ - Отправить выражение, где " 2p3*4 " ваш пример | в http ельзя использовать +, поэтому вместо него пишите - p
 
 ```
+curl -X GET http://localhost:8080/expressions
+``` 
+- Статус выражений.
+
 ```
-Пользователь: root
-Пароль: testerum
+curl -X GET http://localhost:8080/agents_status
+``` 
+- Статус агентов.
+
 ```
-*** Ссылки: ***
+curl -X POST -d "add=2" http://localhost:8080/computation_agent
+``` 
+- Добавить агента(ов), где " add=2 " кол-во агентов
+
+
+## Вручную:
+
+Статус агентов
 ```
-Яндекс Лицей: https://yandexlyceum.ru/
+http://localhost:8080/agents_status
+```
+Статус выражений
+```
+http://localhost:8080/expressions
+```
+## Дополнительно
 
-Docker: https://www.docker.com/
-
-Docker Compose: https://docs.docker.com/compose/
-
-Vue.js: https://vuejs.org/
-
-MySQL: https://www.mysql.com/
+Запустите start.bat и введите пример
+```
+Ввести можно будет только пример и получить ответ
 ```
